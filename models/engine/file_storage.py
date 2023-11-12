@@ -41,12 +41,12 @@ class FileStorage:
         from models.state import State
 
         classes = {"BaseModel": BaseModel,
-                    "User" : User,
-                    "Amenity": Amenity,
-                    "City": City,
-                    "Place": Place,
-                    "Review": Review,
-                    "State": State
+                   "User": User,
+                   "Amenity": Amenity,
+                   "City": City,
+                   "Place": Place,
+                   "Review": Review,
+                   "State": State
                    }
         return classes
 

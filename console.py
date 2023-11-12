@@ -13,7 +13,6 @@ class HBNBCommand(cmd.Cmd):
     """
     prompt = "(hbnb) "
 
-
     def do_EOF(self, line):
         """handles EOF"""
         return True
@@ -26,7 +25,7 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """an empty line"""
         pass
-    
+
     def do_create(self, arg):
         """Creates a new instance of BaseModel"""
         if arg is None or arg == "":
@@ -37,11 +36,12 @@ class HBNBCommand(cmd.Cmd):
             new_instance = storage.classes()[arg]()
             print(new_instance.id)
             new_instance.save()
-        
+
     def do_show(self, arg):
-        """Prints the string representation of an instance based on the class name"""
+        """Prints the string representation of
+        an instance based on the class name"""
         if arg is None or arg == "":
-            print ("** class name missing **")
+            print("** class name missing **")
         else:
             args = arg.split(' ')
             if args[0] not in storage.classes():
@@ -53,8 +53,8 @@ class HBNBCommand(cmd.Cmd):
                 if key not in storage.all():
                     print("** no instance found **")
                 else:
-                    print(storage.all()[key])  
-    
+                    print(storage.all()[key])
+
     def do_destroy(self, arg):
         if arg is None or arg == "":
             print("** class name missing **")
@@ -69,9 +69,9 @@ class HBNBCommand(cmd.Cmd):
                 if key not in storage.all():
                     print("** no instance found **")
                 else:
-                    del storage.all()[key] 
+                    del storage.all()[key]
                     storage.save()
-    
+
     def do_all(self, arg):
         if arg is None or arg == "":
             obj = [str(v) for k, v in storage.all().items()]
@@ -82,8 +82,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
             else:
                 obj = [str(v) for k, v in storage.all().items()
-                       if type(v).__name__ == args[0]
-                      ]
+                       if type(v).__name__ == args[0]]
                 print(obj)
 
     def do_update(self, arg):
@@ -107,6 +106,7 @@ class HBNBCommand(cmd.Cmd):
                 key = "{}.{}".format(args[0], args[1])
                 setattr(storage.all()[key], args[2], args[3])
                 storage.save()
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

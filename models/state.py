@@ -3,6 +3,8 @@
 State Module
 """
 from models.base_model import BaseModel
+
+
 class State(BaseModel):
     """State Class"""
 
@@ -11,4 +13,3 @@ class State(BaseModel):
     def __init__(self, *args, **kwargs):
         """Initialization"""
         super().__init__(*args, **kwargs)
-    

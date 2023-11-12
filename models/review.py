@@ -3,6 +3,8 @@
 Review Module
 """
 from models.base_model import BaseModel
+
+
 class Review(BaseModel):
     """Review Class"""
 
@@ -12,4 +14,4 @@ class Review(BaseModel):
 
     def __init__(self, *args, **kwargs):
         """Initialization"""
-        super().__init__(*args, **kwargs) 
+        super().__init__(*args, **kwargs)
