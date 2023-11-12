@@ -5,7 +5,10 @@ State Module
 from models.base_model import BaseModel
 class State(BaseModel):
     """State Class"""
-    def __init__(self):
+
+    name = ""
+
+    def __init__(self, *args, **kwargs):
         """Initialization"""
-        self.name = ""
+        super().__init__(*args, **kwargs)
     
