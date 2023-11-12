@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+"""autoinit"""
 
 from models.engine.file_storage import FileStorage
 storage = FileStorage()
