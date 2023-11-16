@@ -1,0 +1,1 @@
+This project is part of the ALX Software Engineering program and Holberton School. It involves creating a web static for AirBnB, replicating the functionality of the AirBnB website.
